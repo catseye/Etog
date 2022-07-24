@@ -58,9 +58,9 @@ while trying to grasp these concepts.
 As of this writing, [Equational logic (Wikipedia)](https://en.wikipedia.org/wiki/Equational_logic)
 does not contain a very clear explanation.  This is because it
 focuses on a particular equational logic, **E**, from the
-book "A Logical Approach to Discrete Math"
+second edition of the book "A Logical Approach to Discrete Math"
 by David Gries and Fred Schneider.  While it is a very interesting book
-([the 1st edition is borrowable from archive.org)](https://archive.org/details/logicalapproacht0000grie),
+([the 1st edition is borrowable from archive.org)](https://archive.org/details/logicalapproacht0000grie)),
 its presentation of equational logic is somewhat unorthodox:
 
 *   The axiom they call **Leibniz** most other sources call **Congruence**,
@@ -88,6 +88,13 @@ literature, and is equivalent to Gries and Schneider's **Leibniz**
 rule; and its Axiom 5 is often called **Substitution** or
 **Replacement** elsewhere.
 
+### 📝 Dynamic Logic
+
+The book "Dynamic Logic" by David Harel, Dexter Kozen, and Jerzy Tiuryn,
+which [can be borrowed from archive.org](https://archive.org/details/dynamiclogicfoun00davi_0),
+contains a section on Equational Logic (section 3.3), which serves as
+a very good introduction.
+
 ### 📝 Papers by George F. McNulty
 
 Professor George F. McNulty of USC has written two excellent resources on equational logic:
@@ -108,3 +115,25 @@ The course notes have a few highlights definitely worth mentioning here:
 The field guide lists many results in equational logic, but the most interesting
 to me is section 6, which describes Tarski's relation algebra and how formulae of
 first-order logic of up to 3 variables (but no more!) may be translated to it.
+
+### "Equational Reasoning"
+
+The phrase "equational reasoning" refers to *informally* using an
+equational theory to determine the meaning of (usually) a fragment
+of a program in a programming language, which is (usually)
+referentially transparent.
+
+TODO: Add reference to an article that illustrates this
+
+### "Modulo an Equational Theory"
+
+The phrase "modulo an equational theory" refers to automatically treating
+two terms as equal if there is a proof of their equality in an equational
+theory.  This is sometimes employed in theorem provers, etc. to reduce
+the amount of trivial proof work that is needed to show a result, especially
+when it comes to "standard" equational axioms such as associativity and
+commutivity.  Instead of going through all the steps to show that
+`a.(b.(c.d))` = `((a.b).c).d` (where `.` is associative), the two terms
+are automatically considered equal.
+
+TODO: Add reference to a tool that implements this (egg?)
